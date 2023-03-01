@@ -1,15 +1,18 @@
 # Projeto - Criando uma API no visual Studio
 ## ✨ _API catálogo_✨
 
-    O meu objetivo será criar uma web API para um catálogo de produtos/categorias que poderá atender a uma rede de lojas, supermercados e também consumidores finais.
+    O meu objetivo será criar uma web API para um catálogo de produtos/categorias que
+    poderá atender a uma rede de lojas, supermercados e também consumidores finais.
 
 
 
 ## Features
 
-    - Um serviço RESTful que pormite que aplicativos clientes acessem e gerenciem o catálogo de produtos e categorias.
+    - Um serviço RESTful que pormite que aplicativos clientes acessem e gerenciem ocatálogo
+    de produtos e categorias.
     - Abordando os conceitos fundamentais da criação de uma Web API usando o ASP NET core.
-    - Expor endpoints para criar, ler, editar e excluir produtos/categorias e também consultar produtos/categorias usando os verbos HTTP e os códigos de status.
+    - Expor endpoints para criar, ler, editar e excluir produtos/categorias e também consultar
+    produtos/categorias usando os verbos HTTP e os códigos de status.
 
 
 ## Roteiro da criação da Web Api
