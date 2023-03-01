@@ -17,8 +17,8 @@
 
 ## Roteiro da criação da Web Api
 
-*Criar o projeto no VS 2022 Community – ApiCatalogo.
-*Criar o projeto com opção para habilitar a Open API e usar Controllers.
+* Criar o projeto no VS 2022 Community – ApiCatalogo.
+* Criar o projeto com opção para habilitar a Open API e usar Controllers.
 *Criar o modelo de entidades – Produtos e Categoria.
 *Configurar o projeto para usar o EF Core e incluir referências ao EF Core.
 *Definir o banco de dados usado – MySql e MySQL Workbench.
