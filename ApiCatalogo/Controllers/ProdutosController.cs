@@ -20,7 +20,7 @@ namespace ApiCatalogo.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Produto>> Get()
         {
-            var produtos = _context.Produtos.ToList();
+            var produtos = _context.Produtos.AsNoTracking().ToList();
             if (produtos is null)
             {
                 return NotFound("Produtos não encontrados");
@@ -46,7 +46,7 @@ namespace ApiCatalogo.Controllers
                 return BadRequest();
 
             _context.Produtos.Add(produto);
-            _context.SaveChanges();
+             _context.SaveChanges();
 
             return new CreatedAtRouteResult("ObterProduto",
                 new { id = produto.ProdutoId }, produto);

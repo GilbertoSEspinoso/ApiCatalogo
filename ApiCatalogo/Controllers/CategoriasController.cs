@@ -27,25 +27,45 @@ namespace ApiCatalogo.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Categoria>> Get()
         {
-            return _context.Categorias.ToList();
+            try
+            {
+                return _context.Categorias.AsNoTracking().ToList();
+            }
+            catch (Exception)
+            {
+
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Ocorreu um problema ao tratar a sua solicitação.");
+            }
+
         }
 
 
         [HttpGet("{id:int}", Name = "ObterCategoria")]
         public ActionResult<Categoria> Get(int id)
         {
-            var categoria = _context.Categorias.FirstOrDefault(p => p.CategoriaId == id);
-            if (categoria == null)
-                return NotFound("Categoria não encontrada...");
+            try
+            {
+                var categoria = _context.Categorias.FirstOrDefault(p => p.CategoriaId == id);
+                if (categoria == null)
+                    return NotFound($"Categoria com o id = {id} não encontrada...");
 
-            return Ok(categoria);
+                return Ok(categoria);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                   "Ocorreu um problema ao tratar a sua solicitação.");
+            }
+
+
         }
 
         [HttpPost]
         public ActionResult Post(Categoria categoria)
         {
             if (categoria == null)
-                return BadRequest();
+                return BadRequest("Dados inválidos");
 
             _context.Categorias.Add(categoria);
             _context.SaveChanges();
@@ -58,7 +78,7 @@ namespace ApiCatalogo.Controllers
         public ActionResult Put(int id, Categoria categoria)
         {
             if (id != categoria.CategoriaId)
-                return BadRequest();
+                return BadRequest("Dados inválidos");
 
             _context.Entry(categoria).State = EntityState.Modified;
             _context.SaveChanges();
@@ -70,7 +90,7 @@ namespace ApiCatalogo.Controllers
         {
             var categoria = _context.Categorias.FirstOrDefault(p => p.CategoriaId == id);
             if (categoria == null)
-                return NotFound("Categoria não encontrada...");
+                return NotFound($"Categoria com id = {id} não encontrada...");
 
             _context.Categorias.Remove(categoria);
             _context.SaveChanges();
