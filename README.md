@@ -7,9 +7,11 @@ Uma web API que serve para criar catálogos de produtos em cada tipo de categori
 
 ## Features
 
-- Um serviço RESTful que permite que aplicativos clientes acessem e gerenciem um ocatálogo de produtos e categorias.
-- Abordado os conceitos fundamentais da criação de uma Web API usando o ASP NET core / EntityFramework Core.
-- Expor endpoints para criar, ler, editar e excluir produtos/categorias e também consultar produtos/categorias usando os verbos HTTP e os códigos de status.
+-Um serviço RESTful que permite que aplicativos clientes acessem e gerenciem um catálogo de produtos e categorias.
+
+-Abordando os conceitos fundamentais de criação de uma Web API usando o ASP NET core / EntityFramework Core.
+
+-Expor endpoints para criar, ler, editar e excluir produtos/categorias e também consultar produtos/categorias usando os verbos HTTP e os códigos de status.
 
 
 ## Roteiro da criação da Web Api
