@@ -1,5 +1,5 @@
 # Projeto - Criando uma API no visual Studio
-## ✨ _API catálogo_✨
+## ✨ _ApiCatalogo_✨
 
 Uma web API que serve para criar catálogos de produtos em cada tipo de categoria, que poderá atender a uma rede de lojas, supermercados e também consumidores finais. 
 
